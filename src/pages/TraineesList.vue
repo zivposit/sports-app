@@ -2,7 +2,6 @@
 import { useRoute } from "vue-router";
 import { useTraineesStore } from "@/store/trainees";
 import TraineeCard from "@/components/TraineeCard.vue";
-import Paragraph from "@/components/Paragraph.vue";
 import Modal from "@/components/Modal.vue";
 import TraineeForm from "@/components/forms/TraineeForm.vue";
 import { onMounted, computed, ref } from "vue";

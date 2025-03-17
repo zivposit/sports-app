@@ -30,7 +30,7 @@ onMounted(async () => {
 
 <template>
     <div
-        class="text-center block p-4 bg-white shadow-md rounded-lg border border-gray-200 hover:bg-gray-100  transition">
+        class="text-center block p-4 bg-white shadow-md rounded-lg border border-gray-200 hover:bg-gray-100 transition flex flex-col justify-between">
         <div @click="navigateToDetails" class="flex flex-row gap-4 items-center cursor-pointer">
             <div v-if="profilePicture" class="w-1/3">
                 <img :src="profilePicture" alt="Trainer Picture" class="w-full h-full object-cover rounded-lg" />
@@ -38,7 +38,8 @@ onMounted(async () => {
             <div class="w-2/3">
                 <Paragraph :text="[trainer.firstName, trainer.lastName].join(' ')" type="title" />
                 <div class="flex flex-col mt-2">
-                    <Paragraph :text="'ID Number: ' + trainer.idNumber" type="paragraph" />
+                    <Paragraph :text="'ID Number:'" type="paragraph" />
+                    <Paragraph :text="trainer.idNumber" type="paragraph" />
                 </div>
             </div>
         </div>
